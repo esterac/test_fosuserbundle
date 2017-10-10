@@ -75,6 +75,9 @@ fos_user:
         form:
             type: AppBundle\Form\RegistrationType
             validation_groups: [AppBundleRegistration]
+        confirmation:
+            enabled: true
+            
     profile:
         form:
             type: AppBundle\Form\ProfileType

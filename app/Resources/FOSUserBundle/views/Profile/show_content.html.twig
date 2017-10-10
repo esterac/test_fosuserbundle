@@ -1,0 +1,11 @@
+<div class="fos_user_user_show">
+    <p>{{ 'profile.show.name'|trans({}, 'FOSUserBundle') }}: {{ user.name }}</p>
+    <p>{{ 'profile.show.last_name'|trans({}, 'FOSUserBundle') }}: {{ user.lastname }}</p>
+    <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+    <p>{{ 'profile.show.address'|trans({}, 'FOSUserBundle') }}: {{ user.address }}</p>
+</div>
+
+<div>
+	<!--link a otra vista, busco la ruta en vendor/friendsofsymfony/fos/UserBundle/Resources/config/routing/profile.xml -->
+<a href="{{path('fos_user_profile_edit')}}">Editar</a>
+</div>

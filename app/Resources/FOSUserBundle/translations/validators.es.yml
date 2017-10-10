@@ -1,0 +1,13 @@
+fos_user:
+    name:
+        blank: "Por favor, ingrese un nombre"
+        short: "[-Inf,Inf]El nombre es demasiado corto"
+        long: "[-Inf,Inf]El nombre es demasiado largo"
+    last_name:
+        blank: "Por favor, ingrese su apellido"
+        short: "[-Inf,Inf]Su apellido es demasiado corto"
+        long: "[-Inf,Inf]su apellido es demasiado largo"
+    address:
+        blank: "Por favor, ingrese su direccion"
+        short: "[-Inf,Inf]Su direccion es demasiado corta"
+        long: "[-Inf,Inf]su direccion es demasiado larga"

@@ -1,0 +1,9 @@
+profile:
+    show:
+        name: Nombre
+        last_name: Apellidos
+        address: Direccion
+form:
+    name: Nombre
+    last_name: Apellidos
+    address: Direccion
