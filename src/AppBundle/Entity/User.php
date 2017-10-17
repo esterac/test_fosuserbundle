@@ -13,6 +13,12 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User extends BaseUser
 {
+
+     /**
+     * @ORM\OneToMany(targetEntity="Billing", mappedBy="billing")
+     */
+
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -39,6 +45,11 @@ class User extends BaseUser
 
 
 
+    //genero este campo para relacionar un usario con multiples facturas
+    /**
+     * @ORM\OneToMany(targetEntity="Billing", mappedBy="user")
+     */
+    protected $billings;
 
 
 
@@ -125,5 +136,38 @@ class User extends BaseUser
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Add billings
+     *
+     * @param \AppBundle\Entity\Billing $billings
+     * @return User
+     */
+    public function addBilling(\AppBundle\Entity\Billing $billings)
+    {
+        $this->billings[] = $billings;
+
+        return $this;
+    }
+
+    /**
+     * Remove billings
+     *
+     * @param \AppBundle\Entity\Billing $billings
+     */
+    public function removeBilling(\AppBundle\Entity\Billing $billings)
+    {
+        $this->billings->removeElement($billings);
+    }
+
+    /**
+     * Get billings
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBillings()
+    {
+        return $this->billings;
     }
 }
