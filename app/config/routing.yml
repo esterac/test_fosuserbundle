@@ -2,6 +2,10 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
+app_yml:
+#le digo que me coja las rutas de esta direccion
+    resource: '@AppBundle/Resources/config/routing.yml'
+
 # app/config/routing.yml FOSUserBlundle routing files
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

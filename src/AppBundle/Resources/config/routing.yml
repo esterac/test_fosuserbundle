@@ -1,0 +1,3 @@
+billing:
+   path: /billing/new
+   defaults: { _controller: AppBundle:Billing:newBilling }

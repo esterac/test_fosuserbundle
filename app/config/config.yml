@@ -82,3 +82,5 @@ fos_user:
         form:
             type: AppBundle\Form\ProfileType
             validation_groups: [AppBundleProfile]
+
+
