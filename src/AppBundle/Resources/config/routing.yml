@@ -1,3 +1,8 @@
 billing:
    path: /billing/new
    defaults: { _controller: AppBundle:Billing:newBilling }
+
+billing_edit:
+   path: /billing/edit/{id}
+   #pido la id en el path del boton editar
+   defaults: { _controller: AppBundle:Billing:editBilling }

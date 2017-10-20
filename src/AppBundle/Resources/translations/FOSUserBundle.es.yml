@@ -1,0 +1,11 @@
+billing:
+    show:
+        number: Número de Factura
+        date: Fecha
+        description: Descripción
+        total: Total
+form:
+    number: Número
+    date: Fecha
+    description: Descripción
+    total: Total

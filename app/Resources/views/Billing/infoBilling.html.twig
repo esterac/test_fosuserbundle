@@ -1,0 +1,12 @@
+{# app/Resources/views/billing/infoBilling.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="fos_user_user_show">
+    <p>{{ 'billing.show.number'|trans({}, 'FOSUserBundle') }}: {{ billing.number }}</p>
+    <p>{{ 'billing.show.date'|trans({}, 'FOSUserBundle') }}: {{ billing.date|date("d/m/Y") }}</p>
+    <p>{{ 'billing.show.description'|trans({}, 'FOSUserBundle') }}: {{ billing.description }}</p>
+    <p>{{ 'billing.show.total'|trans({}, 'FOSUserBundle') }}: {{ billing.total }}</p>
+</div>
+<a href="{{ path('billing_edit', { 'id' : billing.id }) }}">Editar</a>
+{% endblock %}

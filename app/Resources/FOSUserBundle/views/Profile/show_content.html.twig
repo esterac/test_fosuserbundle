@@ -3,9 +3,21 @@
     <p>{{ 'profile.show.last_name'|trans({}, 'FOSUserBundle') }}: {{ user.lastname }}</p>
     <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
     <p>{{ 'profile.show.address'|trans({}, 'FOSUserBundle') }}: {{ user.address }}</p>
+    <p>Listado de Facturas</p>
+    <!--Hago un bucle for en twig para que me saque todas las facturas de mi usuario-->
+    {% for billing in user.billings %}
+    	<ul>
+    		<li>{{billing.number}}</li>
+    	</ul>
+    {% endfor %}
+
+
+
+
 </div>
 
 <div>
 	<!--link a otra vista, busco la ruta en vendor/friendsofsymfony/fos/UserBundle/Resources/config/routing/profile.xml -->
 <a href="{{path('fos_user_profile_edit')}}">Editar</a>
 </div>
+

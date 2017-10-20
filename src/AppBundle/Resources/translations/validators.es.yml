@@ -1,0 +1,13 @@
+billing:
+    number:
+        blank: "Por favor, ingrese un numero de factura"
+        short: "[-Inf,Inf]El numero es demasiado corto"
+        long: "[-Inf,Inf]El numero es demasiado largo"
+    description:
+        blank: "Por favor, ingrese una descripcion"
+        short: "[-Inf,Inf]Su descripción es demasiado corta"
+        long: "[-Inf,Inf]su descripción es demasiado larga"
+    total:
+        blank: "Por favor, ingrese una cifra"
+        short: "[-Inf,Inf]Su cifra es demasiado corta"
+        long: "[-Inf,Inf]su cifra es demasiado larga"

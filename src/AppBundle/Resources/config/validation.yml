@@ -33,6 +33,50 @@ AppBundle\Entity\User:
                 groups: [ "AppBundleProfile" ]
 
 
+AppBundle\Entity\Billing:
+    properties:
+    # Your custom fields in your user entity, here is an example with FirstName
+        number:
+            - NotBlank:
+                message: billing.number.blank
+                groups: [ "AppBundleBilling"]
+            - Length:
+                min: 2
+                minMessage: billing.number.short
+                max: 100
+                maxMessage: billing.number.long
+                groups: [ "AppBundleBilling"]
+        # date:
+        #     - NotBlank:
+        #         message: fos_user.date.blank
+        #         groups: [ "AppBundleRegistration", "AppBundleProfile" ]
+        #     - Length:
+        #         min: 2
+        #         minMessage: fos_user.date.short
+        #         max: 255
+        #         maxMessage: fos_user.date.long
+        #         groups: [ "AppBundleBilling"]
+        description:
+            - NotBlank:
+                message: billing.description.blank
+                groups: [ "AppBundleProfile" ]
+            - Length:
+                min: 2
+                minMessage: billing.description.short
+                max: 255
+                maxMessage: billing.description.long
+                groups: [ "AppBundleBilling"]
+        total:
+            - NotBlank:
+                message: billing.total.blank
+                groups: [ "AppBundleBilling"]
+            - Length:
+                min: 1
+                minMessage: billing.total.short
+                max: 100
+                maxMessage: billing.total.long
+                groups: [ "AppBundleBilling"]
+
 
 
 # Note: We still want to validate the email

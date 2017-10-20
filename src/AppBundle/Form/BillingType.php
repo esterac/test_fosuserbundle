@@ -46,7 +46,7 @@ class BillingType extends AbstractType
    {
        $resolver->setDefaults(array(
            'data_class' => 'AppBundle\Entity\Billing',//especifico donde se guardan los datos de la clase
-           'translation_domain' => 'AppBundle', //incluye el archivo de traducción al formulario
+           // 'translation_domain' => 'translation', //incluye el archivo de traducción al formulario
            'validation_groups' => array ('AppBundleBilling')
        ));
    }

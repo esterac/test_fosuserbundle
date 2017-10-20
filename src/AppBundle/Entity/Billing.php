@@ -51,7 +51,7 @@ class Billing
 
     //genero este campo para relacionar mis facturas con los user
     /**
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User",inversedBy="billings")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
      */
     protected $user;
